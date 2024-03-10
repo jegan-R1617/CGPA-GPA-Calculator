@@ -7,13 +7,14 @@ Note:
 */
 public class Main{
 
-  public static void gpa() {
+public static void gpa() {
 	   Scanner sc=new Scanner(System.in);
 	   System.out.println("Enter Number of Semester");
 	   int nos=sc.nextInt();
 	   int i=0;
 	   double gparesult=0.0;
 	   int gpa=nos;
+	   double res=0;
 	   while(nos-->0) {
 		   i++;
 	    System.out.println("For "+i+" Semester");
@@ -26,19 +27,50 @@ public class Main{
 		   System.out.println("Credits     Grade points");
 		    gp=sc.nextInt();
 		    ggp=sc.nextInt();
+		    if(gp<5 && ggp<11) {
 		    credit+=gp;
 		     total+=(gp*ggp);
+		    }
+		    else {
+		    	System.out.println("-------------------------------------------");
+		    	if(gp>4) {
+		    	System.out.println("Please Enter a correct creidts");
+                  System.out.println("Credits     Grade points");
+		    	  gp=sc.nextInt();
+				    ggp=sc.nextInt();
+				    if(gp<5 && ggp<11) {
+				    credit+=gp;
+				     total+=(gp*ggp);
+				    }
+		    	}
+		    	if(ggp>10) {
+		    	System.out.println("Please Enter a correct Grade points");
+                      System.out.println("Credits     Grade points");
+		    	  gp=sc.nextInt();
+				    ggp=sc.nextInt();
+				    if(gp<5 && ggp<11) {
+				    credit+=gp;
+				     total+=(gp*ggp);
+				    }
+		    	}
+		    }
 	   }
-	   double res=(total/credit);
+	    res=(total/credit);
 	   System.out.println("YOUR "+i+" SEMESTER GPA");
 	   System.out.printf("****  %.2f   *****",res);
 	   System.out.println();
 	   if(gpa>1)
 		   gparesult+=res;
 	   }
-	   
+	   if(gpa>1) {
 	   System.out.println("CGPA upto "+i+" Semester = ");
 	   System.out.printf("%.2f",gparesult/gpa);
+	   }
+	   else {
+
+		   System.out.println("CGPA upto 1 Semester = ");
+		   System.out.printf("%.2f",res);
+	   }
 		}
    public static void cgpa(){
 	   Scanner sc=new Scanner(System.in);
@@ -74,4 +106,3 @@ public class Main{
 	}
 
 }
-
