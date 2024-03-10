@@ -1,0 +1,78 @@
+//Simple CGPA and GPA claculator using java code.
+import java.util.*;
+/*
+Note:
+ Here,I used a class name as Main
+ If you write this code any other class you should change the class name 
+*/
+public class Main{
+
+   public static void cgpa() {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter Number of Semester");
+	   int nos=sc.nextInt();
+	   int i=0;
+	   double gparesult=0.0;
+	   int gpa=nos;
+	   while(nos-->0) {
+		   i++;
+	    System.out.println("For "+i+" Semester");
+	   System.out.println("Enter number of subjects");
+	   int limit=sc.nextInt();
+	   double total=0;
+	   int gp,ggp;
+	   double credit =0;
+	   while(limit-->0) {
+		   System.out.println("Grade Points      Gainned Grade Points");
+		    gp=sc.nextInt();
+		    ggp=sc.nextInt();
+		    credit+=gp;
+		     total+=(gp*ggp);
+	   }
+	   double res=(total/credit);
+	   System.out.println("YOUR "+i+" SEMESTER CGPA");
+	   System.out.printf("****  %.2f   *****",res);
+	   System.out.println();
+	   if(gpa>1)
+		   gparesult+=res;
+	   }
+	   
+	   System.out.println("GPA upto "+i+" Semester = ");
+	   System.out.printf("%.2f",gparesult/gpa);
+		}
+
+   public static void gpa(){
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("No of Semester");
+	   int sem=sc.nextInt();
+	   int i=0;
+	   double tot=0.0;
+	   double div=sem*1.0;
+	   while(sem-->0) {
+		   i++;
+		   System.out.println("Enter your "+i+"Semester CGPA");
+		   double cgpa=sc.nextDouble();
+		   tot+=cgpa;
+	   }
+	   double result=(tot/div);
+	   System.out.println("YOUR TOTAL GPA TILL "+i+" SEMESTER");
+	   System.out.printf("****    %.2f    ****",result);
+   }
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("*********Enter Your Choice**********");
+		System.out.println("1.CGPA  2.GPA");
+		int ch=sc.nextInt();
+		switch(ch) {
+		case 1:
+			cgpa();
+			break;
+		case 2:
+			gpa();
+			break;
+		}
+
+	}
+
+}
