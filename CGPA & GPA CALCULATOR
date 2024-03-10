@@ -7,7 +7,7 @@ Note:
 */
 public class Main{
 
-   public static void cgpa() {
+  public static void gpa() {
 	   Scanner sc=new Scanner(System.in);
 	   System.out.println("Enter Number of Semester");
 	   int nos=sc.nextInt();
@@ -23,25 +23,24 @@ public class Main{
 	   int gp,ggp;
 	   double credit =0;
 	   while(limit-->0) {
-		   System.out.println("Grade Points      Gainned Grade Points");
+		   System.out.println("Credits     Grade points");
 		    gp=sc.nextInt();
 		    ggp=sc.nextInt();
 		    credit+=gp;
 		     total+=(gp*ggp);
 	   }
 	   double res=(total/credit);
-	   System.out.println("YOUR "+i+" SEMESTER CGPA");
+	   System.out.println("YOUR "+i+" SEMESTER GPA");
 	   System.out.printf("****  %.2f   *****",res);
 	   System.out.println();
 	   if(gpa>1)
 		   gparesult+=res;
 	   }
 	   
-	   System.out.println("GPA upto "+i+" Semester = ");
+	   System.out.println("CGPA upto "+i+" Semester = ");
 	   System.out.printf("%.2f",gparesult/gpa);
 		}
-
-   public static void gpa(){
+   public static void cgpa(){
 	   Scanner sc=new Scanner(System.in);
 	   System.out.println("No of Semester");
 	   int sem=sc.nextInt();
@@ -50,29 +49,29 @@ public class Main{
 	   double div=sem*1.0;
 	   while(sem-->0) {
 		   i++;
-		   System.out.println("Enter your "+i+"Semester CGPA");
+		   System.out.println("Enter your "+i+"Semester GPA");
 		   double cgpa=sc.nextDouble();
 		   tot+=cgpa;
 	   }
 	   double result=(tot/div);
-	   System.out.println("YOUR TOTAL GPA TILL "+i+" SEMESTER");
+	   System.out.println("YOUR TOTAL CGPA TILL "+i+" SEMESTER");
 	   System.out.printf("****    %.2f    ****",result);
    }
-
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("*********Enter Your Choice**********");
-		System.out.println("1.CGPA  2.GPA");
+		System.out.println("1.GPA  2.CGPA");
 		int ch=sc.nextInt();
 		switch(ch) {
 		case 1:
-			cgpa();
+			gpa();
 			break;
 		case 2:
-			gpa();
+			cgpa();
 			break;
 		}
 
 	}
 
 }
+
