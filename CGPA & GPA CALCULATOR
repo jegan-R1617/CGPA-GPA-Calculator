@@ -63,8 +63,12 @@ public static void gpa() {
 		   gparesult+=res;
 	   }
 	   if(gpa>1) {
-	   System.out.println("CGPA upto "+i+" Semester = ");
+		   System.out.println("=========================  RESULT  ============================");
+	   System.out.println();
+	   System.out.print("CGPA upto "+i+" Semester = ");
 	   System.out.printf("%.2f",gparesult/gpa);
+	   System.out.println();
+	   System.out.println("==============================================================");
 	   }
 	   else {
 
@@ -93,7 +97,9 @@ public static void gpa() {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("*********Enter Your Choice**********");
 		System.out.println("1.GPA  2.CGPA");
-		int ch=sc.nextInt();
+		int ch;
+		do {
+	     ch=sc.nextInt();
 		switch(ch) {
 		case 1:
 			gpa();
@@ -101,7 +107,12 @@ public static void gpa() {
 		case 2:
 			cgpa();
 			break;
+		default:
+			System.out.println("Enter a Correct Option");
+			break;
+			
 		}
+	  }while(ch!=1 || ch!=2);
 
 	}
 
