@@ -32,9 +32,12 @@ public static void gpa() {
 		     total+=(gp*ggp);
 		    }
 		    else {
-		    	System.out.println("-------------------------------------------");
+		    	System.out.println("------------------------------------------------------------------------");
+		    	System.out.println();
 		    	if(gp>4) {
-		    	System.out.println("Please Enter a correct creidts");
+		    	System.out.println("                   Please Enter a correct creidts                       ");
+		    	System.out.println();
+		    	System.out.println("------------------------------------------------------------------------");
                   System.out.println("Credits     Grade points");
 		    	  gp=sc.nextInt();
 				    ggp=sc.nextInt();
